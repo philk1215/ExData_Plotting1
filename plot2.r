@@ -1,0 +1,5 @@
+x <- read.table("PwrData.txt", header=TRUE, sep=";")
+png('plot2.png')
+plot(x$Global_active_power,xlab="Date",ylab="Power",main="Global Active Power",type="n")
+lines(x$Global_active_power, main = "Global Active Power")
+dev.off()
