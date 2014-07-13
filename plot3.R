@@ -1,0 +1,8 @@
+ x <- read.table("PwrData.txt", header=TRUE, sep=";")
+png('plot3.png')
+plot(x$Sub_metering_1,xlab="Date",ylab="Energy sub metering",type="n")
+legend("topright", lty = 1, col = c("black","blue", "red"), legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+lines(x$Sub_metering_1, main = "Global Active Power")
+lines(x$Sub_metering_2, main = "Global Active Power",col="red")
+lines(x$Sub_metering_3, main = "Global Active Power",col="blue")
+dev.off()
