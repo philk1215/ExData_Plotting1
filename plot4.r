@@ -1,4 +1,5 @@
 x <- read.table("PwrData.txt", header=TRUE, sep=";")
+png('plot4.png')
 par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))#set 4 charts
 #First Chart
 plot(x$Global_active_power,ylab="Global Active Power",type="n")
@@ -15,3 +16,4 @@ lines(x$Sub_metering_3, main = "Global Active Power",col="blue")
 #4th Chart
 plot(x$Global_reactive_power,xlab="datetime",ylab="Global_reactive_power",type="n")
 lines(x$Global_reactive_power)
+dev.off()
